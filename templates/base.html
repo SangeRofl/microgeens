@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {%block  title-%}
+        <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet"> 
+        <title>Microgreens</title>
+    {%endblock%}
+    </head>
+    <body>
+    {%block content -%}
+        <h1>Main page</h1>
+        <a href="/lnk">Text</a>
+        {%for cat, msg in get_flashed_messages(True)%}
+        <div class="flash {{cat}}">{{msg}}</div>
+        {%endfor%}
+        <form action="/auth" method="post">
+            <p>Логин</p>
+            <p><input type="text" value="" name="username"></p>
+            <p>Пароль</p>
+            <p><input type="password" value="" name="pwd"></p>
+            <div >
+                <input type="submit" value="Отправить" class="buton">
+            </div>    
+        </form>
+    <!--Пример добавления товара-->
+    <ul> 
+        {%for product in products%}
+        <li>{{product}}</li>
+        {%endfor%}
+    </ul>
+    {%endblock%}
+    </body>
+</html>
+

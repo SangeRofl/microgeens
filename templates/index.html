@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Microgreens</title>
-    </head>
-    <body>
-        <h1>Main page</h1>
-        <form action="/about" method="post">
-            <p>
-                test
-            </p>
-            <button>connection test button</button>
-        </form>
-    <!--Пример добавления товара-->
-    <ul> 
-        {%for product in products%}
-        <li>{{product}}</li>
-        {%endfor%}
-    </ul>
-    </body>
-</html>
+{% extends 'base.html'%}
+
+{%block content%}
+asdasdasd
+{{ super() }}
+Доп контент
+{%endblock%}

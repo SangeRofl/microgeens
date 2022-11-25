@@ -7,7 +7,9 @@ app.config['SECRET_KEY'] = 'gf789sdg4p3ogdrsg0fsdgdfs0g'
 prods = ["Яблоко", "Апельсин", "Груша"]
 
 
-
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    return render_template('register.html', products = prods)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

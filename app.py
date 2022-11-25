@@ -23,7 +23,7 @@ def auth():
     if(request.method == 'POST'):
         print(request.form)
         flash('Вход выполнен', category='success')
-    return render_template('index.html', products = prods)
+    return render_template('auth.html')
 
 @app.route('/lnk')
 def lnk():
@@ -34,5 +34,4 @@ def pageNotFound(error):
     return '<h1>Попали не туда</h1>' 
 
 if __name__ == "__main__":
-    System()
     app.run(debug = True)

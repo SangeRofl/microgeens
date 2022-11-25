@@ -5,8 +5,8 @@ class SystemInterface:
         pass
     def showMainPage(self):
         return render_template('index.html')
-    def showGoods(id_item: int):
-        pass
+    def showGoods(self, id_item: int):
+        return render_template('shop.html')
     def showSystemMenu(self):
         pass
     def showComments(self, comments: list):

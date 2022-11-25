@@ -11,7 +11,11 @@ prods = ['1']
 
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
-    return es.showEntranceScreen()
+    return es.showEntranceScreen()\
+
+@app.route('/shop', methods=['GET', 'POST'])
+def shop():
+    return si.showGoods(0)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():

@@ -41,7 +41,7 @@ def index():
                     return si.showMainPage()
             return es.showEntranceScreen()
     if(not flag):
-        return es.showEntranceScreen()
+        return r.showRegistrationScreen('register.html')
     return si.showMainPage()
     
 

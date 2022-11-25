@@ -14,6 +14,12 @@
     {%block content -%}
     <header class="header">
       <div class="header__container container">
+        <a href="/" class="header__logo"
+          ><img
+            class="logo-image"
+            src=".//static/img/main-page/logo.png"
+            alt="Логотип"
+        /></a>
         <nav class="header__menu menu">
           <ul class="menu__list">
             <li class="menu__item">
@@ -50,12 +56,6 @@
     <main class="main-page">
       <div class="main-page__container container">
         <div class="main-page__content">
-          <a href="#" class="main-page__logo"
-            ><img
-              class="logo-image"
-              src=".//static/img/main-page/logo.png"
-              alt="Логотип"
-          /></a>
           <div class="main-page__title">
             <h1 class="main-page__company">Green</h1>
             <div class="main-page__description">Магазин микрозелени</div>
@@ -107,15 +107,7 @@
     {%for cat, msg in get_flashed_messages(True)%}
     <div class="flash {{cat}}">{{msg}}</div>
     {%endfor%}
-    <form action="/auth" method="post">
-      <p>Логин</p>
-      <p><input type="text" value="" name="username" /></p>
-      <p>Пароль</p>
-      <p><input type="password" value="" name="pwd" /></p>
-      <div>
-        <input type="submit" value="Отправить" class="buton" />
-      </div>
-    </form>
+
     <!--Пример добавления товара-->
     <ul>
       {%for product in products%}

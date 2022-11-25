@@ -74,6 +74,15 @@ input {
   padding: 15px;
 }
 
+.header__logo {
+  margin: 0 20px 0 0;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+}
+
 .header__menu {
   flex: 1 1 auto;
 }
@@ -146,7 +155,7 @@ input {
 
 /*-------------------main-block----------------------*/
 .main-page {
-  padding: 70px 0 0 0;
+  padding: 90px 0 0 0;
   background-color: rgba(249, 249, 249, 0.926);
   height: 100%;
 }
@@ -167,11 +176,6 @@ input {
 .main-page__logo {
   display: flex;
   align-items: center;
-}
-
-.logo-image {
-  width: 30px;
-  height: 30px;
 }
 
 .main-page__title {
@@ -353,23 +357,21 @@ input {
   border-bottom: 1px solid rgb(73, 191, 255);
 }
 
-/*-------------------benefit----------------------*/
+/*-------------------shop----------------------*/
 
-.benefit__container {
-  padding: 50px 15px 140px 15px;
+.shop__container {
+  padding: 90px 0 0 0;
 }
 
-.benefit__title {
-  text-align: center;
+.shop__title {
+  width: 40px;
+  margin: 0 auto 20px;
+  color: #081f32;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.benefit__text {
-  text-align: center;
-  margin: 25px 0 60px 0;
-  padding: 0 161px;
-}
-
-.benefit__row {
+.shop__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -381,12 +383,15 @@ input {
   padding: 17px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .row__image {
   display: block;
   margin: 0 auto;
-  max-width: 74px;
+  max-width: 150px;
+  flex: 1 1 auto;
 }
 
 .row__title {
@@ -401,4 +406,15 @@ input {
 
 .row__text {
   text-align: center;
+}
+
+/*-------------------shop----------------------*/
+
+.product__item {
+}
+.product__image {
+}
+.product__title {
+}
+.product__text {
 }

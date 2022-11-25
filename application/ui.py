@@ -36,17 +36,35 @@ class EntranceScreen:
 class Registration:
     def showRegistrationScreen(self, link):
         return render_template('register.html')
-    def __checkEntranceData(self, data: list)->bool:
+
+    def __checkForCorrectData(self, data: list)->bool:
         return True
-    def __writeUserData(self, userData:list):
-        pass
+
+    def writeUserData(self, userData:list):
+        file = open("application\\data.txt","a")
+        file.write(userData[0]+userData[1])
+        file.close()
+
     def goToEntrance(self):
         pass
 
 class Enrtance:
     def checkPassword(self, pwd:list)->bool:
-        return True
+        file = open("application\\data.txt","r")
+        res = False
+        if pwd in "".join(file.readlines()):
+            res = True
+            print(1)
+        file.close()
+        return res
+
     def checkLogin(self, login: list)->bool:
-        return True
+        file = open("application\\data.txt","r")
+        res = False
+        if login in "".join(file.readlines()):
+            res = True
+            print(1)
+        file.close()
+        return res
     def signIn():
         pass

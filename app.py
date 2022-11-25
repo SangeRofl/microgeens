@@ -1,9 +1,9 @@
 from flask import Flask, render_template, url_for, request, flash
-from application.ui import SystemInterface, EntranceScreen, Registration
+from application.ui import SystemInterface, EntranceScreen, Registration, Enrtance
 from application.system import System
 from application.goods import Item
 
-currUser=False
+flag=False
 
 app = Flask("microgreens")
 app.config['SECRET_KEY'] = 'gf789sdg4p3ogdrsg0fsdgdfs0g'
@@ -11,7 +11,13 @@ prods = ['1']
 
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
-    return es.showEntranceScreen()\
+    if (request.method=='POST'):
+        r.writeUserData([request.form['username'], request.form['pwd']])
+    return es.showEntranceScreen()
+
+@app.route('/product', methods=['GET', 'POST'])
+def product():
+    return render_template('product.html')
 
 @app.route('/shop', methods=['GET', 'POST'])
 def shop():
@@ -24,18 +30,24 @@ def register():
 @app.route('/main', methods=['GET', 'POST'])
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    global currUser
-    if (request.method=='POST'):
-        currUser = True  
-    if(not currUser):
-        return r.showRegistrationScreen('register.html')
+    global flag
+    if(not flag):
+        if (request.method=='POST'):
+            currUser = [request.form['username'], request.form['pwd']]  
+            if(e.checkLogin(currUser[0])):
+                if(e.checkPassword(currUser[1])):
+                    flag = True
+                    return si.showMainPage()
+            return es.showEntranceScreen()
+    return r.showRegistrationScreen('register.html')
     
-    return si.showMainPage()
 
 
 if __name__ == "__main__":
     si = SystemInterface()
-    s = System()
     es = EntranceScreen('\\auth')
+    e = Enrtance()
     r = Registration()
+    s = System()
+    s.runSystemInterface()
     app.run(debug = True)

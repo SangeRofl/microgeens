@@ -35,7 +35,7 @@ class EntranceScreen:
 
 class Registration:
     def showRegistrationScreen(self, link):
-        pass
+        return render_template('register.html')
     def __checkEntranceData(self, data: list)->bool:
         return True
     def __writeUserData(self, userData:list):

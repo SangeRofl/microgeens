@@ -4,7 +4,7 @@ class SystemInterface:
     def __init__(self):
         pass
     def showMainPage():
-        return render_template('index')
+        return render_template('index.html')
     def showGoods(id_item: int):
         pass
     def showSystemMenu():
@@ -26,7 +26,7 @@ class EntranceScreen:
         return self.__link
     
     def showEntranceScreen(self):
-        pass
+        return render_template('auth.html')
 
     def linkToTheRegistration(self, link: str)->str:
         pass

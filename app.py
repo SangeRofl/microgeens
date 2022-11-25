@@ -3,14 +3,15 @@ from application.ui import SystemInterface, EntranceScreen
 from application.system import System
 from application.goods import Item
 
+currUser=False
+
 app = Flask("microgreens")
 app.config['SECRET_KEY'] = 'gf789sdg4p3ogdrsg0fsdgdfs0g'
-
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
     if(request.method == 'POST'):
         flash('Вход выполнен', category='success')
-        return si.showMainPage()
+        currUser=True
     return es.showEntranceScreen()
 
 
@@ -18,6 +19,7 @@ def auth():
 @app.route('/main', methods=['GET', 'POST'])
 @app.route('/', methods=['GET', 'POST'])
 def index():
+
     return render_template('index.html', products = prods)
 
 

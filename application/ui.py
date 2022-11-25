@@ -3,19 +3,19 @@ from flask import render_template
 class SystemInterface:
     def __init__(self):
         pass
-    def showMainPage():
+    def showMainPage(self):
         return render_template('index.html')
     def showGoods(id_item: int):
         pass
-    def showSystemMenu():
+    def showSystemMenu(self):
         pass
-    def showComments(comments: list):
+    def showComments(self, comments: list):
         pass
-    def showRatings(ratings: list):
+    def showRatings(self, ratings: list):
         pass
-    def showUserAccount():
+    def showUserAccount(self):
         pass
-    def showSearhLine():
+    def showSearhLine(self):
         pass
 
 class EntranceScreen:

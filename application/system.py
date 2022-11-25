@@ -3,8 +3,8 @@ from application.model import User
 from application.model import User, Admin
 from application.ui import SystemInterface
 class System:
-    def __init__(self, interface: SystemInterface):
-        self.__interface = interface
+    # def __init__(self, interface: SystemInterface):
+    #     self.__interface = interface
 
     def leaveComment(self, text:str, item:Item, user:User):
         pass

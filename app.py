@@ -34,5 +34,5 @@ def pageNotFound(error):
     return '<h1>Попали не туда</h1>' 
 
 if __name__ == "__main__":
-    System
+    System()
     app.run(debug = True)

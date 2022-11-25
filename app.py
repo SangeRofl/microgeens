@@ -31,15 +31,18 @@ def register():
 @app.route('/', methods=['GET', 'POST'])
 def index():
     global flag
-    if(not flag):
-        if (request.method=='POST'):
+    if (request.method=='POST'):
+        
+        if(not flag):
             currUser = [request.form['username'], request.form['pwd']]  
             if(e.checkLogin(currUser[0])):
                 if(e.checkPassword(currUser[1])):
                     flag = True
                     return si.showMainPage()
             return es.showEntranceScreen()
-    return r.showRegistrationScreen('register.html')
+    if(not flag):
+        return es.showEntranceScreen()
+    return si.showMainPage()
     
 
 

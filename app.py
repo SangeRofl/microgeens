@@ -5,7 +5,7 @@ from application.goods import Item
 
 app = Flask("microgreens")
 app.config['SECRET_KEY'] = 'gf789sdg4p3ogdrsg0fsdgdfs0g'
-
+prods = ['1']
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
     if(request.method == 'POST'):

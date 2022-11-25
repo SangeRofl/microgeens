@@ -1,34 +1,127 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    {%block  title-%}
-        <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet"> 
-        <title>Microgreens</title>
+  <head>
+    {%block title-%}
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+      rel="stylesheet"
+    />
+    <title>Microgreens</title>
     {%endblock%}
-    </head>
-    <body>
+  </head>
+  <body>
     {%block content -%}
-        <h1>Main page</h1>
-        <a href="/lnk">Text</a>
-        {%for cat, msg in get_flashed_messages(True)%}
-        <div class="flash {{cat}}">{{msg}}</div>
-        {%endfor%}
-        <form action="/auth" method="post">
-            <p>Логин</p>
-            <p><input type="text" value="" name="username"></p>
-            <p>Пароль</p>
-            <p><input type="password" value="" name="pwd"></p>
-            <div >
-                <input type="submit" value="Отправить" class="buton">
-            </div>    
-        </form>
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Магазин</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Оплата</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Акции</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Инструкция</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#" class="header__bag"
+          ><img
+            class="bag-image"
+            src=".//static/img/header/bag.png"
+            alt="Логотип"
+        /></a>
+      </div>
+    </header>
+    <main class="main-page">
+      <div class="main-page__container container">
+        <div class="main-page__content">
+          <a href="#" class="main-page__logo"
+            ><img
+              class="logo-image"
+              src=".//static/img/main-page/logo.png"
+              alt="Логотип"
+          /></a>
+          <div class="main-page__title">
+            <h1 class="main-page__company">Green</h1>
+            <div class="main-page__description">Магазин микрозелени</div>
+          </div>
+          <div class="main-page__form">
+            <form class="form__search" action="">
+              <button
+                type="button"
+                name="search-button"
+                class="form__button button"
+              ></button>
+              <input
+                type="search"
+                name="search-form"
+                placeholder="Search..."
+                class="search-input"
+              />
+            </form>
+          </div>
+          <div class="main-page__call">
+            <div class="call__icon">
+              <img
+                class="phone-image"
+                src=".//static/img/main-page/phone.png"
+                alt="Трубка"
+              />
+            </div>
+            <div class="call_content">
+              <div class="call__free-call">Бесплатный звонок</div>
+              <div class="call_number">8 (000) 111-11-11</div>
+              <div class="call__callback">Обратный звонок</div>
+            </div>
+          </div>
+        </div>
+        <div class="main-page__news">
+          <div class="news__background">
+            <div class="news__block">
+              <div class="news__title"></div>
+              <div class="news__content"></div>
+              <div class="news__button button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <h2>Main page</h2>
+    <a href="/lnk">Text</a>
+    {%for cat, msg in get_flashed_messages(True)%}
+    <div class="flash {{cat}}">{{msg}}</div>
+    {%endfor%}
+    <form action="/auth" method="post">
+      <p>Логин</p>
+      <p><input type="text" value="" name="username" /></p>
+      <p>Пароль</p>
+      <p><input type="password" value="" name="pwd" /></p>
+      <div>
+        <input type="submit" value="Отправить" class="buton" />
+      </div>
+    </form>
     <!--Пример добавления товара-->
-    <ul> 
-        {%for product in products%}
-        <li>{{product}}</li>
-        {%endfor%}
+    <ul>
+      {%for product in products%}
+      <li>{{product}}</li>
+      {%endfor%}
     </ul>
     {%endblock%}
-    </body>
+  </body>
 </html>
-

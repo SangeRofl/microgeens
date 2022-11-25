@@ -11,6 +11,8 @@
   box-sizing: border-box;
 }
 
+a.text:active,
+a.text:hover,
 a {
   text-decoration: none;
 }
@@ -243,6 +245,10 @@ input {
 }
 
 .news__background {
+  background: no-repeat
+    url(https://okzelen.com.ua/wp-content/uploads/2021/02/microgreen-pea-sprouts-isolate-white-background-845x500.jpg);
+  background-size: cover;
+  height: 450px;
 }
 
 .news__block {
@@ -342,4 +348,57 @@ input {
 }
 
 .registration__text {
+  font-size: 16px;
+  color: rgb(73, 191, 255);
+  border-bottom: 1px solid rgb(73, 191, 255);
+}
+
+/*-------------------benefit----------------------*/
+
+.benefit__container {
+  padding: 50px 15px 140px 15px;
+}
+
+.benefit__title {
+  text-align: center;
+}
+
+.benefit__text {
+  text-align: center;
+  margin: 25px 0 60px 0;
+  padding: 0 161px;
+}
+
+.benefit__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row__item {
+  flex: 0 1 calc((100% - 90px) / 4);
+  width: calc((100% - 90px) / 4);
+  padding: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.row__image {
+  display: block;
+  margin: 0 auto;
+  max-width: 74px;
+}
+
+.row__title {
+  font-family: Gelasio;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #081f32;
+  margin: 40px 0 15px 0;
+}
+
+.row__text {
+  text-align: center;
 }

@@ -42,7 +42,7 @@
             </li>
           </ul>
         </nav>
-        <a href="/bascet" class="header__bag"
+        <a href="/" class="header__bag"
           ><img
             class="bag-image"
             src=".//static/img/header/bag.png"
@@ -50,49 +50,21 @@
         /></a>
       </div>
     </header>
-    <div class="shop__container container">
-      <div class="shop__title">Микрозелень</div>
-      <div class="shop__row row">
-        <div class="row__item">
-          <a href="/product"
-            ><img
-              src=".//static/img/shop/lucerna.png"
-              alt="Зелень"
-              class="row__image"
-          /></a>
-          <p class="row__title">110 руб.</p>
-          <p class="row__text">Люцерна</p>
-        </div>
-        <div class="row__item">
-          <a href=""
-            ><img
-              src=".//static/img/shop/colrabi.jpg"
-              alt="Зелень"
-              class="row__image"
-          /></a>
-          <p class="row__title">250 руб.</p>
-          <p class="row__text">Кольраби</p>
-        </div>
-        <div class="row__item">
-          <a href="">
-            <img
-              src=".//static/img/shop/kapusta.jpg"
-              alt="Зелень"
-              class="row__image"
-          /></a>
-          <p class="row__title">237 руб.</p>
-          <p class="row__text">Капуста</p>
-        </div>
-        <div class="row__item">
-          <a href="">
-            <img
-              src=".//static/img/shop/gorchica.jpg"
-              alt="Зелень"
-              class="row__image"
-            />
-            <p class="row__title">190 руб.</p>
-            <p class="row__text">Горчица</p></a
-          >
+    <div class="basket__container container">
+      <div class="basket__item">
+        <form action="/" method="post" class="basket__form">
+        <ul>
+            <li>Люцерна - 110 руб.</li>
+            <li>Кольраби - 250 руб.</li>
+        </ul>
+        <div>
+            <input
+                type="submit"
+                value="Оплатить"
+                class="basket__button button"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>

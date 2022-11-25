@@ -427,3 +427,22 @@ input {
   background-color: rgba(76, 242, 96, 0.788);
   border-radius: 20px;
 }
+
+/*-------------------basket----------------------*/
+
+.basket__container {
+  width: 400px;
+  border: 1px solid gray;
+  margin: 0 auto;
+}
+.container {
+}
+.basket__item {
+}
+.basket__form {
+}
+.basket__button {
+  padding: 10px;
+  background-color: rgba(76, 242, 96, 0.788);
+  border-radius: 20px;
+}

@@ -7,6 +7,7 @@ currUser=False
 
 app = Flask("microgreens")
 app.config['SECRET_KEY'] = 'gf789sdg4p3ogdrsg0fsdgdfs0g'
+prods = ['1']
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
     if(request.method == 'POST'):
@@ -14,7 +15,9 @@ def auth():
         currUser=True
     return es.showEntranceScreen()
 
-
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    return render_template('register.html', products = prods)
 
 @app.route('/main', methods=['GET', 'POST'])
 @app.route('/', methods=['GET', 'POST'])

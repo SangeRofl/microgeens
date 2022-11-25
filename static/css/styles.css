@@ -295,11 +295,12 @@ input {
 }
 .authorization__button {
   padding: 10px 40px;
-  background-color: blue;
+  background-color: rgba(72, 114, 252, 0.967);
   border-radius: 20px;
 }
 .button {
   border: 0;
+  color: white;
 }
 
 /*-------------------reg---------------------*/
@@ -335,4 +336,10 @@ input {
   padding: 8px;
   background-color: rgb(73, 191, 255);
   border-radius: 5px;
+}
+
+.registration__entrance {
+}
+
+.registration__text {
 }
